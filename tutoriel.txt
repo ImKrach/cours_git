@@ -1,0 +1,99 @@
+si git non installé sur le pc : sudo apt-get install git
+Repository -> dossier dans lequel se trouve le projet dans git
+Commit -> mettre 1 ou plusieurs fichier dans un même message
+
+Créer un dossier (exemple : git)
+Se positionner dedans 
+git init
+
+Si on fait ls -> ya rien
+ls -all -> il y a un dossier git
+
+Créer un fichier : nano readme    et ecrire du texte et enregistrer
+faire ls -> le fichier existe
+
+git status -> vu des paramètres (readme en rouge car le fichier n’est pas surveillé)
+
+git add readme -> faire surveiller le fichier readme
+
+git status -> (readme en vert car le fichier est maintenant surveillé)
+
+Configurer git :
+git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+git commit readme -> la page de message de commit s’ouvre : écrire un message par exemple : Initialisation du Repository et ajout du fichier readme
+L’écriture d’un message est obligatoire. Il doit être court et compréhensible. En anglais si possible.
+Ctrl O pour enregistrer
+Crtl X pour quitter
+
+git commit readme / git status (préférer celle-là)-> Message :
+Sur la branche master
+rien à valider, la copie de travail est propre
+
+git log -> affiche le numéro du commi, email, auteur...ect.
+
+Allez sur GitHub et “Créer un répository”
+Ecrire dans Répository name un nom : cours_git (par exemple)
+Cliquez sur “Creat Repository”
+
+Copier l’adresse HTTPS (lien direct vers un APi qui permet de lier le répository distant e notre repository distant) Sa s’appel une remote.
+Retourner sur le terminal et créer le lien : (origin c’est le nom du remote, mettre ce qu’on veut. Ici on met origin car c’est le premier)
+git remote add origin https://github.com/ImKrach/cours_git.git
+envoyer les données sur le repository distant : 
+git push origin master
+
+On nous demande nos identifiant GitHub. Donc pour moi :
+username : ImKrach
+pass : tu sais
+ENTRER
+
+On voit qu’on résumé est écrit sur l’envoi au répository distant. Et qu’une branch Master a été créé.
+
+Retourner sur Github et rechargez notre page. On arrive sur la page du projet.
+
+Revenir sur le terminal
+nano readme
+Ecrire du texte en plus pour appliquer une modification.
+
+git status -> readme en rouge ce qui veut dire qu’il a été modifié mais pas envoyé au répository distant
+
+git diff -> Montre ce qui a été modifier dans un fichier.
+Pour moi voilà le resultat :
+diff --git a/readme b/readme
+index 598bd08..416e952 100644
+--- a/readme
++++ b/readme
+@@ -1 +1,3 @@
+ Ceci est mon super Readme pour mon super projet
++
++Ceci est une deuxième ligne pour mon super projet
+
+git commit readme -> Ecrire un message par exemple : Ajout d'une deuxieme ligne a readme
+Ctrl O
+Ctrl X
+
+git status -> Affiche que tout est Ok 
+Sur la branche master
+rien à valider, la copie de travail est propre
+
+git push origin master -> redemande les identifiants
+
+Allez sur GitHub et on a notre deuxième commits affiché.
+
+Récupérer nos données en ligne :
+Sur GitHub, cliquer sur Clone or download. Copier le lien. ( https://github.com/ImKrach/cours_git.git )
+
+Retourner sur le terminal.
+
+git clone https://github.com/ImKrach/cours_git.git
+
+Une vérification se fait. 
+faire ls -> Onr retrouve le dossier cours_git que l’on avait créé sur github, on y retrouve notre readme.
+git status -> Sur la branche master
+Votre branche est à jour avec 'origin/master'.
+rien à valider, la copie de travail est propre
+
+git branch accueil -> On crée une branch accueil
+
+git branch -> On voit la branche que nous venons de créer
