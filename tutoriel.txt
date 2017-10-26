@@ -3,7 +3,7 @@ Repository -> dossier dans lequel se trouve le projet dans git
 Commit -> mettre 1 ou plusieurs fichier dans un même message
 
 Créer un dossier (exemple : git)
-Se positionner dedans 
+Se positionner dedans
 git init
 
 Si on fait ls -> ya rien
@@ -40,7 +40,7 @@ Cliquez sur “Creat Repository”
 Copier l’adresse HTTPS (lien direct vers un APi qui permet de lier le répository distant e notre repository distant) Sa s’appel une remote.
 Retourner sur le terminal et créer le lien : (origin c’est le nom du remote, mettre ce qu’on veut. Ici on met origin car c’est le premier)
 git remote add origin https://github.com/ImKrach/cours_git.git
-envoyer les données sur le repository distant : 
+envoyer les données sur le repository distant :
 git push origin master
 
 On nous demande nos identifiant GitHub. Donc pour moi :
@@ -73,7 +73,7 @@ git commit readme -> Ecrire un message par exemple : Ajout d'une deuxieme ligne 
 Ctrl O
 Ctrl X
 
-git status -> Affiche que tout est Ok 
+git status -> Affiche que tout est Ok
 Sur la branche master
 rien à valider, la copie de travail est propre
 
@@ -88,11 +88,11 @@ Retourner sur le terminal.
 
 git clone https://github.com/ImKrach/cours_git.git
 
-Une vérification se fait. 
-faire ls -> Onr retrouve le dossier cours_git que l’on avait créé sur github, on y retrouve notre readme.
+Une vérification se fait.
+faire ls -> On retrouve le dossier cours_git que l’on avait créé sur github, on y retrouve notre readme.
 git status -> Sur la branche master
-Votre branche est à jour avec 'origin/master'.
-rien à valider, la copie de travail est propre
+    Votre branche est à jour avec 'origin/master'.
+    rien à valider, la copie de travail est propre
 
 git branch accueil -> On crée une branch accueil
 
